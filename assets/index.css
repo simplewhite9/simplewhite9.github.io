@@ -102,6 +102,11 @@ a.hobby-link:hover{
     cursor:pointer;
 }
 
+#main-link:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+
 
 /** Slogan <br> */
 span.newLine{
