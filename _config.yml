@@ -35,8 +35,26 @@ github_username:  simplewhite9
 theme: null
 plugins:
   - jekyll-feed
-
+markdown: kramdown
 include: [_pages, _layouts]
+
+
+#Layouts
+defaults:
+  -
+    scope:
+      type: posts
+      path: _posts
+    values:
+      is_post: true
+      layout: post
+  -
+    scope:
+      type: pages
+      path: _pages
+    values:
+      is_post: false
+      layout: default
 
 
 # Exclude from processing.
