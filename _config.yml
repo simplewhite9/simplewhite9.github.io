@@ -60,6 +60,10 @@ defaults:
 #Pagination
 paginate : 10
 
+#sass
+sass:
+  sass_dir: _sass
+  # style: :compressed
 
 #JekyII compress
 compress_html:
