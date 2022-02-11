@@ -15,6 +15,35 @@ body{
     height: 100%;
 
     background-color: $main-color;
-    padding-top: 30px;
+    padding-top: 100px;
+    text-align: center;
+
+    #profile{
+        width: 8rem;
+        height: 8rem;
+        margin:auto;
+        border-radius: 50%;
+
+        background-color: black;
+    }
+
+    .main-title {
+        padding-top: 0.5rem;
+
+        a{ 
+            font-size: 1.2rem;
+        }
+    }
+
+    #menu{
+        margin-top: 1.5rem;
+
+        table th, table td{
+            padding:5px 10px;
+        }
+    }
+
+
 }
+
 
