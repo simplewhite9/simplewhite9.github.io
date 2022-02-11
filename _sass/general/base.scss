@@ -1,7 +1,8 @@
-h3{
-    color: blue;
-    
-}
+body{
+    font-family: Roboto Mono;
+    font-style: normal;
+    letter-spacing: -0.065em;
+  }
 
 
 /* sidebar */
@@ -13,6 +14,7 @@ h3{
     width: $sidebar-width;
     height: 100%;
 
-
     background-color: $main-color;
+    padding-top: 30px;
 }
+
