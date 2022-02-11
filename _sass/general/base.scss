@@ -15,12 +15,13 @@ body{
     height: 100%;
 
     background-color: $main-color;
-    padding-top: 100px;
+    padding-top: 80px;
     text-align: center;
+    z-index: 100;
 
     #profile{
-        width: 8rem;
-        height: 8rem;
+        width: 6.5rem;
+        height: 6.5rem;
         margin:auto;
         border-radius: 50%;
 
@@ -37,11 +38,34 @@ body{
     }
 
     #menu{
-        margin-top: 2rem;
+        margin: 1.5rem 2.5rem;
+
+        table, table th, table td, table tr{
+            border:none;
+            background-color: $main-color;
+        }
 
         table th, table td{
-            padding:0.2rem 2.5rem;
+            padding:0.1rem 0.1rem;
         }
+
+        table td:hover{
+            background-color: $highlight-hover;
+            color: black;
+
+            border-radius: 7%;
+            border-left: 2px solid gray;
+        }
+
+        td.menu-space:hover{
+            background-color: $main-color;
+            border: none;
+        }
+
+    }
+
+    #slogan{
+        color: $highlight-color;
     }
 
 
