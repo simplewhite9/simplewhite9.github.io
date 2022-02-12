@@ -58,7 +58,7 @@ defaults:
       path: _pages
     values:
       is_post: false
-      layout: default
+      layout: page
 
 
 #Pagination
