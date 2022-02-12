@@ -3,6 +3,7 @@ body{
     font-style: normal;
     letter-spacing: -0.065em;
   }
+  
 
 
 /* sidebar */
@@ -48,6 +49,14 @@ body{
         margin: 2.8rem 2.7rem;
         font-size: 0.9rem;
 
+        a{
+            color: black;
+        }
+
+        a:hover{
+            text-decoration: none;
+        }
+
         table, table th, table td, table tr{
             border:none;
             background-color: $main-color;
@@ -70,13 +79,47 @@ body{
             border: none;
         }
 
+        td#menu-blog{
+            color: #43978F;
+            font-weight: 700;
+        }
+
+        td#menu-blog:hover{
+            background-color: rgba(67, 151, 143, 0.14);
+            cursor: pointer;
+        }
+
+        th.menu-social:hover{
+            background-color: rgba(67, 151, 143, 0.14);
+            border-left: 2px solid gray;
+        }
+
     }
 
     #slogan{
         color: $highlight-color;
+        font-size: 1.0rem;
     }
 
 
+}
+
+
+/** SVG css */
+#svg-insta{
+    margin-top:3px;
+    margin-left:-4px;
+}
+
+#svg-git{
+    margin-left:4px;
+    margin-top: 3px;
+}
+
+.svg-emoji{
+    width: 45px;
+    height: auto;
+    margin-bottom:-12px;
 }
 
 
