@@ -1,0 +1,38 @@
+/* page.html scss*/
+
+
+/* Post list */
+
+table#post-table{
+    border: none;
+
+    td{
+        border: none;
+    }
+
+    .post-list{
+        display: flex;
+        border: 0.6px solid rgb(240, 240, 240);
+        border-radius: 8px;
+
+        margin: 0px 20px;
+        padding: 10px;
+
+        .post-thumbnail{
+            width: $thumbnail-width;
+            padding: 5px;
+
+            .thumbnail{
+                background-color: $lightgray;
+                width: 6rem;
+                height: 6rem;
+                margin:auto;
+            }
+        }
+
+        .post-info{
+            width: 100%;
+            padding: 0px 30px;
+        }
+    }
+}
