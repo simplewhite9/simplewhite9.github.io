@@ -15,7 +15,7 @@ body{
     height: 100%;
 
     background-color: $main-color;
-    padding-top: 80px;
+    padding-top: 90px;
     text-align: center;
     z-index: 100;
 
@@ -34,11 +34,17 @@ body{
 
         a{ 
             font-size: 1.3rem;
+            color: black;
+        }
+
+        a:hover{
+            text-decoration: none;
+            color: gray;
         }
     }
 
     #menu{
-        margin: 1.5rem 2.5rem;
+        margin: 2.8rem 2.5rem;
 
         table, table th, table td, table tr{
             border:none;
