@@ -7,6 +7,16 @@ body{
   
 
 
+/* core content */
+.page-content{
+    margin-left: $sidebar-width;
+}
+
+#main-wrapper{
+    
+}
+
+
 /* sidebar */
 #sidebar{
     position: fixed;
