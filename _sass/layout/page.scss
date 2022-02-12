@@ -5,9 +5,12 @@
 
 table#post-table{
     border: none;
+    font-family: 'Share Tech Mono', monospace;
 
-    td{
+
+    td, tr{
         border: none;
+        background-color: white;
     }
 
     .post-list{
@@ -32,7 +35,32 @@ table#post-table{
 
         .post-info{
             width: 100%;
-            padding: 0px 30px;
+            padding: 8px 20px;
+
+            .post-category, .post-title{
+                font-size: 1.7rem;
+            }
+
+            .post-title{
+                background-color: $post-highlight;
+                
+            }
+
+            .post-title, .post-description{
+                margin-bottom: 0.4rem;
+            }
+
+            .post-date, .post-keywords{
+                color: rgb(167, 167, 167);
+            }
+
+            .post-description{
+                color: rgb(99, 99, 99);
+            }
+
+            a{
+                color:black;
+            }
         }
     }
 }

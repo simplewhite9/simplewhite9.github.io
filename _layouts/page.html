@@ -11,23 +11,24 @@ layout: default
                 <tr>
                     <td>
                         <div class="post-list">
+
+                            <!--post image-->
                             <div class="post-thumbnail">
                                 <div class="thumbnail">
                                     <img src={{post.thumbnail-url}} onerror="this.style.display='none'"/>
                                 </div>
                             </div>
+
+                            <!--post basic info-->
                             <div class="post-info">
-                                
+                                    <a class="post-maininfo" href="{{post.url | prepend: site.baseurl}}">
+                                        <span class="post-category">{{post.categories}}</span>:
+                                        <span class="post-title">{{post.title}}</span>
+                                    </a>
+                                    <div class="post-description">{{post.description}}</div>
+                                    <span class="post-date">{{post.date | date: "%Y-%m-%d"}}&nbsp;·&nbsp;</span> 
+                                    <span class="post-keywords">{{post.keywords}}</span>
                             </div>
-                            <!-- <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                                <div class="post-info">
-                                <p>Post #1</p>
-                                <h2>{{ post.title }}</h2>
-                                {% for t in post.categories %}
-                                    <h2>{{t}}</h2>
-                                {% endfor %}
-                                </div>
-                            </a> -->
                         </div>
                     </td>
                 </tr>
