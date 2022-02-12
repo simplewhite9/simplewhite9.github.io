@@ -30,6 +30,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: https://simplewhite9.github.io # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  simplewhite9
+github_url: https://github.com/simplewhite9
 
 # Build settings
 theme: null
