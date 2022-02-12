@@ -17,33 +17,38 @@ body{
 
     background-color: $main-color;
     border-right: 0.7px solid rgb(228, 228, 228);
-    padding-top: 90px;
     text-align: center;
     z-index: 100;
 
-    #profile{
-        width: 6.5rem;
-        height: 6.5rem;
-        margin:auto;
-        border-radius: 50%;
+    .profile-wrapper{
+        margin-top: 90px;
 
-        background-color: black;
+        #profile{
+            width: 6.5rem;
+            height: 6.5rem;
+            margin:auto;
+            border-radius: 50%;
+    
+            background-color: black;
+        }
+    
+        .main-title {
+            padding-top: 0.5rem;
+            font-family: $main-font;
+    
+            a{ 
+                font-size: 1.4rem;
+                color: black;
+            }
+    
+            a:hover{
+                text-decoration: none;
+                color: gray;
+            }
+        }
     }
 
-    .main-title {
-        padding-top: 0.5rem;
-        font-family: $main-font;
-
-        a{ 
-            font-size: 1.4rem;
-            color: black;
-        }
-
-        a:hover{
-            text-decoration: none;
-            color: gray;
-        }
-    }
+    
 
     #menu{
         margin: 2.8rem 2.7rem;
