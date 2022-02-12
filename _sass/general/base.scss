@@ -101,10 +101,29 @@ body{
 
     }
 
-    #slogan{
+    #check-text{
         color: $highlight-color;
         font-size: 1.0rem;
     }
+
+    #end-section{
+        position:fixed;
+        bottom: 0;
+        left: 0;
+    
+        width: $sidebar-width;
+        margin: auto;
+        margin-bottom: 0.5rem;
+    
+        text-align: center;
+    
+        #slogan{
+            font-size: 0.8rem;
+            color: rgb(197, 197, 197);
+        }
+    }
+
+    
 
 
 }
@@ -126,5 +145,10 @@ body{
     height: auto;
     margin-bottom:-12px;
 }
+
+
+
+
+
 
 
