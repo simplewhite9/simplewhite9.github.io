@@ -1,3 +1,4 @@
+/* Main body*/
 body{
     font-family: Roboto Mono;
     font-style: normal;
@@ -20,6 +21,7 @@ body{
     text-align: center;
     z-index: 100;
 
+    /*Profile section*/
     .profile-wrapper{
         margin-top: 90px;
 
@@ -55,7 +57,7 @@ body{
     }
 
     
-
+    /*Menu section*/
     #menu{
         margin: 2.8rem 2.7rem;
         font-size: 0.9rem;
@@ -107,11 +109,13 @@ body{
 
     }
 
+    /*CHECK OUT*/
     #check-text{
         color: $highlight-color;
         font-size: 1.0rem;
     }
 
+    /*Bottom section of sidebar*/
     #end-section{
         position:fixed;
         bottom: 0;
@@ -132,7 +136,7 @@ body{
 }
 
 
-/** SVG css */
+/** SVG */
 #svg-insta{
     margin-top:3px;
     margin-left:-4px;
