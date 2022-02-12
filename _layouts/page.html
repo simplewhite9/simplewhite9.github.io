@@ -3,8 +3,34 @@ layout: default
 ---
 
 <div id="main-content">
-    <div id="core-wrapper">HI</div>
+
+    <!--Core content-->
+    <div id="core-wrapper">
+        <table class="post-list">
+            {% for post in site.posts %}
+                <tr>
+                    <td>
+                        <div class="post-thumbnail"></div>
+                        <div class="post-info"></div>
+                        <!-- <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                            <div class="post-info">
+                              <p>Post #1</p>
+                              <h2>{{ post.title }}</h2>
+                              {% for t in post.categories %}
+                                <h2>{{t}}</h2>
+                              {% endfor %}
+                            </div>
+                        </a> -->
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    </div><!--#core-wrapper-->
+
+
+    <!--sub wrapper (RIGHT)-->
     <div id="sub-wrapper">
         this is 
-    </div>
+    </div><!--#sub-wrapper-->
 </div>
