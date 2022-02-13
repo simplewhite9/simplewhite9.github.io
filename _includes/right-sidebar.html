@@ -1,0 +1,15 @@
+<!--Right side bar-->
+
+
+<!--Top Recent Blogs element-->
+<div id="recent-post">
+    <table>
+        <tbody>
+            {% for post in site.posts limit: 5 %}
+            <tr>
+                <td>{{post.categories}}: {{post.title}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

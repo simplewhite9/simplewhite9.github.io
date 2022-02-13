@@ -160,6 +160,17 @@ body{
 
 }
 
+/* right side panel*/
+#recent-post{
+    font-size: 0.8rem;
+
+    td, th, tr, table{
+        border: none;
+        background-color: white;
+    }
+}
+
+
 
 /** SVG */
 #svg-insta{
