@@ -3,7 +3,7 @@ body{
     font-family: Roboto Mono;
     font-style: normal;
     letter-spacing: -0.065em;
-  }
+}
   
 
 
@@ -12,9 +12,11 @@ body{
     margin-left: $sidebar-width;
 }
 
+
 #main-content{
     display: flex;
     min-height: $main-min-height;
+    padding-bottom: $footer-height;
 
     #sub-wrapper{
         width: $sub-max-width;
@@ -177,6 +179,23 @@ body{
 }
 
 
+/*Footer*/
+footer.site-footer{
+    padding: 10px 0;
+
+    .footer-col{
+        font-size: 0.9rem;
+        margin-bottom: 0.7rem;
+    }
+
+    #copyright{
+            font-size: 1.3rem;
+        }
+
+    a:hover{
+        text-decoration: underline;
+    }
+}
 
 
 
