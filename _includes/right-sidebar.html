@@ -3,11 +3,12 @@
 
 <!--Top Recent Blogs element-->
 <div id="recent-post">
+    <h3>Recent posts</h3>
     <table>
         <tbody>
             {% for post in site.posts limit: 5 %}
             <tr>
-                <td>{{post.categories}}: {{post.title}}</td>
+                <td>▷ {{post.categories}}: {{post.title}}</td>
             </tr>
             {% endfor %}
         </tbody>
