@@ -3,7 +3,7 @@ title:  "Today's News Copy"
 date:   2022-01-25 00:12:24 +0900
 categories: Tech News
 tags : 
-keywords: Metaverse
+keywords: [Metaverse]
 thumbnail-url: /assets/img/thumbnail/stanford-nlp-logo-160.jpg
 description: this is a simple description of the post. this is a simple description of the post. this is a simple description of the post. 
 

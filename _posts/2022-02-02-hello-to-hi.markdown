@@ -3,7 +3,7 @@ title:  "LESSON 2"
 date:   2022-02-02 00:12:24 +0900
 categories: CS224N
 tags : 
-keywords: RNN CNN
+keywords: [RNN, CNN]
 thumbnail-url: /assets/img/thumbnail/stanford-nlp-logo-160.jpg
 description: this is a simple description of the post. this is a simple description of the post. this is a simple description of the post. 
 

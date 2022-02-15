@@ -27,7 +27,11 @@ layout: default
                                     </a>
                                     <div class="post-description">{{post.description}}</div>
                                     <span class="post-date">{{post.date | date: "%Y-%m-%d"}}&nbsp;·&nbsp;</span> 
-                                    <span class="post-keywords">{{post.keywords}}</span>
+                                    <span class="post-keywords">
+                                        {% for key in post.keywords %}
+                                        {{key}}
+                                        {% endfor %}
+                                    </span>
                             </div>
                         </div>
                     </td>
