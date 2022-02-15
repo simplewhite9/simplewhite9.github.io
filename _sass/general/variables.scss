@@ -15,9 +15,14 @@ $post-highlight: rgba(254, 255, 197, 0.87);
 $lightgray: rgb(197, 197, 197);
 
 
-$sub-max-width: 295px !default;
+$sub-max-width: 300px !default;
 $main-min-height: 990px;
 $footer-height: 3.5rem;
 
 
 $thumbnail-width: 10rem;
+
+
+$lightblue: hsl(205,46%,92%);
+$darkblue-border: hsl(206,100%,40%);
+$darkblue-font: hsl(205,47%,42%);

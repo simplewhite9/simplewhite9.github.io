@@ -25,7 +25,7 @@ body{
     
     #core-wrapper{
         width: 100%;
-        padding: 30px 50px;
+        padding: 30px 40px;
     }
 }
 
@@ -161,20 +161,57 @@ body{
 }
 
 /* right side panel*/
-#recent-post{
+#right-sidebar{
+    position: fixed;
+    margin-right: 10px;
+
+
     font-size: 0.8rem;
     margin-top: 5px;
+
+    a, td, th, tr, table{
+        color: gray;
+    }
 
     td, th, tr, table{
         border: none;
         background-color: white;
     }
 
+    table{
+        border-left: 0.6px solid rgb(240, 240, 240);
+    }
+
     td{
         padding-left: 0.5rem;
     }
-}
 
+    a:hover{
+        color:black;
+        cursor: pointer;
+    }
+
+    #side-keywords{
+        .tag-link{
+            display: inline-block;
+            margin-bottom: 10px;
+            .tag-count{
+                color: rgb(95, 95, 95);
+                
+            }
+        }
+
+        .tag-highlight{
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.2rem;
+        
+            background-color: $lightblue;
+            color: $darkblue-font;
+        }
+    }
+
+
+}
 
 
 /** SVG */
@@ -211,6 +248,14 @@ footer.site-footer{
     a:hover{
         text-decoration: underline;
     }
+}
+
+
+
+.word-highlight{
+    border: 1px solid rgb(214, 214, 214);
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
 }
 
 
