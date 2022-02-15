@@ -28,8 +28,8 @@ layout: default
                                     <div class="post-description">{{post.description}}</div>
                                     <span class="post-date">{{post.date | date: "%Y-%m-%d"}}&nbsp;·&nbsp;</span> 
                                     <span class="post-keywords">
-                                        {% for key in post.keywords %}
-                                        {{key}}
+                                        {% for tag in post.tags %}
+                                        {{tag}}
                                         {% endfor %}
                                     </span>
                             </div>
