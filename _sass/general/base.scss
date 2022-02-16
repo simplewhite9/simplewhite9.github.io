@@ -267,6 +267,12 @@ footer.site-footer{
     color: $darkblue-font;
 }
 
+
+
+
+
+
+/*Markdown decoration*/
 .underline{
     text-decoration: underline;
 }
@@ -275,18 +281,21 @@ footer.site-footer{
     font-weight: 700;
 }
 
-.post-subtitle{
-    text-decoration: underline;
-    margin-bottom: 4px;
-    font-weight: 700;
-    letter-spacing: 0.05rem;
-}
-
-
 .center{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.highlight-red{ color: rgb(209, 0, 0);}
+.highlight-blue{ color: rgb(27, 27, 158); }
+
+
+.background-yellow{ 
+    background-color: $post-highlight; 
+    padding: 1px 5px;
+    border: 0.5px solid $post-highlight-border;
+    border-radius: 3px;
 }
 
 
