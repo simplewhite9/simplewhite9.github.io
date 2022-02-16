@@ -17,6 +17,7 @@
     .post-title{
         font-size: 2.0rem;
         padding: 0rem 0.4rem;
+        display: flex;
     }
 
     .tag-highlight{
@@ -28,6 +29,24 @@
 
 #post-content{
     font-size: 0.9rem;
+
+    img{
+        max-width: 60%;
+
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+
+    }
+
+    .image-caption{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        
+        color: $darkgray;
+    }
+
 }
 
 pre, code {
@@ -44,3 +63,5 @@ pre, code {
         margin-right: 0.5rem;
     }
 }
+
+
