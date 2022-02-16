@@ -39,6 +39,10 @@ theme: null
 plugins:
   - jekyll-feed
 markdown: kramdown
+
+kramdown:
+   math_engine: mathjax
+   
 include: [_pages, _layouts]
 
 
