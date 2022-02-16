@@ -6,7 +6,7 @@
             <tbody>
                 {% for post in site.posts limit: 5 %}
                 <tr>
-                    <td>📌 <a href="{{post.url | prepend: site.baseurl}}"><span class="word-highlight">{{post.categories}}</span>: {{post.title | truncate : 30}}</a></td>
+                    <td>📌 <a href="{{post.url | prepend: site.baseurl}}"><span class="word-highlight">{{post.categories}}</span>: {{post.title | truncate : 40}}</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -29,7 +29,7 @@
             {% assign items = sorted_tag | split: '###' %}
             {% assign tag = items[1] | replace: '##', ' ' %}
             {% assign count = items[2] | plus: 0 %}
-            
+
             <a class="tag-link" href="/blog/tag/{{ tag | slugify }}" rel="tag">
                 <span class="tag-highlight">{{ tag }}<span class="tag-count">({{ count }})</span></span>
             </a> 
