@@ -1,0 +1,42 @@
+
+.post-header{
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 0.5px solid $lightgray;
+
+    .post-highlight{
+        background-color: $post-highlight;
+        
+    }
+
+    .post-date{
+        color: $darkgray;
+        font-size: 0.8rem;
+    }
+
+    .post-title{
+        font-size: 2.0rem;
+        padding: 0rem 0.4rem;
+    }
+
+    .tag-highlight{
+        padding: 0.1rem 0.2rem;
+        margin-left: 0.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+pre, code {
+    background-color: $post-highlight;
+    border: 0.5px solid $post-highlight-border;
+}
+
+.callout{
+    display: flex;
+    background-color: rgba(241, 241, 239, 1);
+    padding: 1rem 1.5rem;
+
+    .callout-icon{
+        margin-right: 0.5rem;
+    }
+}
