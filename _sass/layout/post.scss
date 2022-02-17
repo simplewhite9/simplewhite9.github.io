@@ -30,8 +30,8 @@
 
 #post-content{
     font-size: 0.9rem;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
 
     .post-subtitle{
         text-decoration: underline;
@@ -54,6 +54,7 @@
         margin-bottom: 20px;
         
         color: $darkgray;
+        font-size: 0.9em;
     }
 
     p{
@@ -69,7 +70,10 @@ pre, code {
 
 .callout{
     display: flex;
-    background-color: rgba(241, 241, 239, 1);
+    // background-color: rgba(241, 241, 239, 1);
+    background-color: $main-color;
+    border: 0.5px solid rgba(241, 241, 239, 1);
+    border-radius: 10px;
     padding: 1rem 1.5rem;
 
     .callout-icon{
