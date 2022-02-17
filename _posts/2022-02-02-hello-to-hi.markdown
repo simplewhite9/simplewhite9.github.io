@@ -29,7 +29,17 @@ print_hi('Tom')
   Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 {% include callout-bottom.html %}
 
+Figure 3: Supervised learning process
 
+training data로 input $X$ 와 output $Y$가 주어졌을때 예측 함수 $h(X)$ 를 통해 $y$ 값을 추측하는 것이다.
+
+
+
+Here, have some $$\pi$$.
+
+The greatest equation known to man is: 
+
+$$e^{ix} = \cos{x} + i\sin{x}$$
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
