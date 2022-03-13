@@ -4,7 +4,7 @@ date:   2022-01-05 00:12:24 +0900
 categories: [Deep Learning]
 tags : [Supervised Learning, Overfitting, Underfitting, MSE, Regularization]
 thumbnail-url: /assets/img/thumbnail/Deep-Learning-logo.png
-description: this is a simple description of the post. this is a simple description of the post. this is a simple description of the post. 
+description: 
 
 ---
 
