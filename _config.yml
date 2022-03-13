@@ -38,6 +38,7 @@ github_url: https://github.com/simplewhite9
 theme: null
 plugins:
   - jekyll-feed
+  - jekyll-archives
 markdown: kramdown
 
 kramdown:
@@ -82,6 +83,16 @@ compress_html:
   blanklines: false
   ignore:
     envs: [development]
+
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /blog/tags/:name/
+    category: /blog/categories/:name/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
