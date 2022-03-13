@@ -64,9 +64,9 @@
                     <p class="category" id="main-link" style="margin-top: -15px;"><a style="color: #43978F;" href="/blog">My Dev Blog</a></p>
                     <div class="block">
                         <p><div class="category">Study Blogs</div>
-                            <a class="study-link" href="" >Deep Learning</a><br>
-                            <a class="study-link" href="" >CS224n (Winter 2021)</a><br>
-                            <a class="study-link" href="" >BaekJoon</a>
+                            {% for category in site.data.categories %}
+                            <a class="study-link" href="/blog/categories/{{category.category}}/" >{{category.name}}</a><br>
+                            {% endfor %}
                         </p>
                     </div>
                     <div class="block">

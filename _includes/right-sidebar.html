@@ -25,12 +25,12 @@
     <div id="side-keywords">
         <h3>Tags</h3>
         
-        {% for sorted_tag in sorted_tags %}
+        {% for sorted_tag in sorted_tags limit: 12 %}
             {% assign items = sorted_tag | split: '###' %}
             {% assign tag = items[1] | replace: '##', ' ' %}
             {% assign count = items[2] | plus: 0 %}
 
-            <a class="tag-link" href="/blog/tag/{{ tag | slugify }}" rel="tag">
+            <a class="tag-link" href="/blog/tags/{{ tag | slugify }}" rel="tag">
                 <span class="tag-highlight">{{ tag }}<span class="tag-count">({{ count }})</span></span>
             </a> 
         {% endfor %}
