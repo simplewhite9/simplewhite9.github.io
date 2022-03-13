@@ -34,7 +34,9 @@
     padding-left: 25px;
 
     .post-subtitle{
-        text-decoration: underline;
+        border-bottom: 1px solid rgb(145, 145, 145);
+        width: fit-content;
+
         margin-bottom: 4px;
         margin-top: 10px;
         font-weight: 700;
@@ -83,5 +85,21 @@ pre, code {
     margin-bottom: 0.5rem;
 }
 
+
+@media all and (max-width: 950px){
+    .post-header{
+        .post-title{
+            display: block;
+        }
+    }
+
+}
+
+@media all and (max-width: 425px){
+    #post-content{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
 
 

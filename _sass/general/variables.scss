@@ -1,8 +1,12 @@
 
 /* side bar */
 $sidebar-width: 260px !default;        // the basic width
-$sidebar-width-small: 210px !default;  // screen width: >= 850px, <= 1199px (iPad landscape)
+$sidebar-width-small: 250px !default;  // smaller width
+$sidebar-width-2xsmall: 210px !default;  // smaller width
+
 $sidebar-width-large: 350px !default;  // screen width: >= 1650px
+
+$navbar-height: 35px !default;
 
 
 $main-color: #F9F9F7;
@@ -12,14 +16,16 @@ $second-font: Roboto Mono, monospace;
 $highlight-color: #F29100;
 $highlight-hover: rgba(255, 161, 19, 0.14);
 $post-highlight: rgba(254, 255, 197, 0.87);
-$post-highlight-border: rgba(231, 231, 148, 0.87);
+$post-highlight-border: rgba(241, 241, 190, 0.87);
 $post-dark-highlight: rgba(232, 233, 155, 0.87);
 
 $lightgray: rgb(197, 197, 197);
 $darkgray: rgb(163, 163, 163);
 
 
-$sub-max-width: 350px !default;
+$sub-max-width: 450px !default;
+$sub-max-width-small : 410px !default;
+
 $main-min-height: 990px;
 $footer-height: 3.5rem;
 

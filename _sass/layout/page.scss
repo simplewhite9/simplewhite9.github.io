@@ -63,3 +63,48 @@ table#post-table{
         }
     }
 }
+
+
+@media all and (max-width: 950px){
+    table#post-table{
+        .post-list{
+            .post-thumbnail{
+                width: 7rem;
+
+                .thumbnail{
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 425px){
+    table#post-table{
+        .post-list{
+            margin: 0px 0;
+
+
+            .post-info{
+                .post-category, .post-title{
+                    font-size: 1.2rem;
+                }
+
+                .post-description, .post-date, .post-keywords{
+                    font-size: smaller;
+                }
+            }
+
+            .post-thumbnail{
+                width: 5rem;
+
+                .thumbnail{
+                    width: 4.5rem;
+                    height: 4.5rem;
+                }
+            }
+        }
+    }
+
+}   
