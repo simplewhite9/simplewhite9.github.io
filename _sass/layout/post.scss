@@ -6,7 +6,7 @@
 
     .post-highlight{
         background-color: $post-highlight;
-        
+        padding: 2px;
     }
 
     .post-date{
@@ -16,7 +16,7 @@
 
     .post-title{
         font-size: 2.0rem;
-        padding: 0rem 0.4rem 0 0;
+        padding: 0.3rem;
         display: flex;
         font-family: $main-font;
     }
@@ -32,6 +32,7 @@
     font-size: 0.9rem;
     padding-right: 25px;
     padding-left: 25px;
+    font-family: $main-font;
 
     .post-subtitle{
         border-bottom: 1px solid rgb(145, 145, 145);
@@ -40,7 +41,7 @@
         margin-bottom: 4px;
         margin-top: 10px;
         font-weight: 700;
-        letter-spacing: 0.05rem;
+        letter-spacing: 0.02rem;
     }
 
     img{
@@ -67,6 +68,9 @@
 
 pre, code {
     background-color: $post-highlight;
+    color: $post-text;
+    padding: 3px;
+    border-radius: 5px;
     border: 0.5px solid $post-highlight-border;
 }
 

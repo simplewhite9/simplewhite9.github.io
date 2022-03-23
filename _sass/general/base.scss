@@ -1,6 +1,6 @@
 /* Main body*/
 body{
-    font-family: Roboto Mono;
+    font-family: $second-font;
     font-style: normal;
     letter-spacing: -0.02em;
 }
@@ -175,7 +175,7 @@ body{
     margin-right: 20px;
 
 
-    font-size: 0.9rem;
+    font-size: 0.76rem;
     
     letter-spacing: 0.1rem;
     font-weight: 400;
@@ -183,6 +183,10 @@ body{
 
     a, td, th, tr, table{
         color: gray;
+    }
+
+    a{
+        display: grid;
     }
 
     td, th, tr, table{
@@ -201,6 +205,12 @@ body{
     a:hover{
         color:black;
         cursor: pointer;
+        text-decoration: none;
+    }
+
+    .category_label{
+        color: rgb(86, 86, 95);
+        font-weight: 600;
     }
 
     #side-keywords{
@@ -329,7 +339,7 @@ footer.site-footer{
     margin-right: auto;
 }
 
-.highlight-red{ color: rgb(226, 0, 0);}
+.highlight-red{ color: rgb(250, 112, 0);}
 .highlight-blue{ color: rgb(27, 27, 158); }
 .highlight-gray{color: $darkgray;}
 
@@ -357,11 +367,6 @@ footer.site-footer{
         #sub-wrapper{
             width: $sub-max-width-small;
         }
-    }
-
-
-    #right-sidebar{
-        font-size: 0.8rem;
     }
 
     
