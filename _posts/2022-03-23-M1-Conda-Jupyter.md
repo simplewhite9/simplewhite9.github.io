@@ -1,6 +1,6 @@
 ---
 title:  "M1 Conda 및 Jupyter Notebook 설치"
-categories: [개인 space]
+categories: [개인 SPACE]
 tags : [M1, Jupyter, Conda]
 thumbnail-url: /assets/img/thumbnail/Conda-Jupyter.png
 description: M1 (Apple Silicon) Conda 및 Jupyter Notebook 설치 방법
