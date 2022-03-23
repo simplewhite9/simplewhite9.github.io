@@ -6,7 +6,7 @@
             <tbody>
                 {% for post in site.posts limit: 5 %}
                 <tr>
-                    <td>📌 <a href="{{post.url | prepend: site.baseurl}}"><span class="word-highlight">{{post.categories}}</span>: {{post.title | truncate : 40}}</a></td>
+                    <td><a href="{{post.url | prepend: site.baseurl}}"><span class="category_label">📌  {{post.categories}}</span>: {{post.title | truncate : 40}}</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
