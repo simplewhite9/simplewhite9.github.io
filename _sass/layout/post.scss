@@ -34,6 +34,10 @@
     padding-left: 25px;
     font-family: $main-font;
 
+    blockquote{
+        font-size: 1.0rem;
+    }
+
     .post-subtitle{
         border-bottom: 1px solid rgb(145, 145, 145);
         width: fit-content;
@@ -68,10 +72,29 @@
 
 pre, code {
     background-color: $post-highlight;
-    color: $post-text;
     padding: 3px;
     border-radius: 5px;
     border: 0.5px solid $post-highlight-border;
+}
+
+.language-plaintext.highlighter-rouge{
+        color: $post-text;
+}
+
+.highlighter-rouge .highlight{
+    background:$dark-main-color;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border: none;
+    border-radius: 5px;
+
+    code{
+        background: none;
+    }
 }
 
 .callout{
