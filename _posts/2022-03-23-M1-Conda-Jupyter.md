@@ -16,7 +16,7 @@ M1에 Anaconda를 설치하는 것이 조금 복잡해졌다고 한다 완벽하
 
 원래 설치하려는 마음이 없었는데 Google Colab ipnyb 파일을 PDF로 다운 받고 싶은데 자꾸 output 그래픽은 다 날려먹는다^^
 
-방법은 오르지 Jupyter를 사용하는 것.. 근데 Jupyter를 사용하려다보니 Anaconda도 같이 다운 받고 싶은데 현재 M1이 지원되는건 minimal conda **miniforge**밖에 없다고 한다 (그나마 희소식 M1 지원 안되는 프로그램이 너무 많다..후)
+방법은 오르지 Jupyter를 사용하는 것.. 근데 Jupyter를 사용하려다보니 Anaconda도 같이 다운 받고 싶은데 현재 M1이 지원되는건 minimal conda **miniforge**밖에 없다고 한다 (이건 그나마 희소식이다! M1은 지원 안되는 프로그램이 너무 많다..후)
 
 ---
 <br>

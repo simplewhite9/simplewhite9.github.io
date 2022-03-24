@@ -1,6 +1,5 @@
 ---
 title:  "Machine Learning의 기초"
-date:   2022-01-05 00:12:24 +0900
 categories: [Deep Learning]
 tags : [Supervised Learning, Overfitting, Underfitting, MSE, Regularization]
 thumbnail-url: /assets/img/thumbnail/Deep-Learning-logo.png
@@ -28,7 +27,7 @@ $x = (x_1, ...., x_n)$도  <span class="bold highlight-red">column</span> vector
 
 이전에 글에서 언급 했듯이 supervised learning은 정답값이 있는 (labeled) 데이터셋을 통해 학습하는 것으로 classification (분류)와 regression(회귀)로 나뉜다.
 
-<img src="/assets/img/post1/post1-01.png" alt="Figure 1" width="300"/>
+<img src="/assets/img/Deep-Learning/post2/01.png" alt="Figure 1" width="300"/>
 <div class="image-caption">Figure 1: Supervised classification example</div>
 
 
@@ -37,7 +36,7 @@ $x = (x_1, ...., x_n)$도  <span class="bold highlight-red">column</span> vector
 
 **`regression`**은 반대로 연속적인 실수를 예측하는 것이다. 예를 들어, 
 
-<img src="/assets/img/post1/post1-02.png" alt="Figure 2" width=650/>
+<img src="/assets/img/Deep-Learning/post2/02.png" alt="Figure 2" width=650/>
 <div class="image-caption">Figure 2: Supervised regression example</div>
 
 
@@ -45,7 +44,7 @@ $x = (x_1, ...., x_n)$도  <span class="bold highlight-red">column</span> vector
 
 Supervised learning의 process를 한눈에 보면,
 
-<img src="/assets/img/post1/post1-03.png" alt="Figure 3" width="300"/>
+<img src="/assets/img/Deep-Learning/post2/03.png" alt="Figure 3" width="300"/>
 <div class="image-caption">Figure 3: Supervised learning process</div>
 
 training data로 input $X$ 와 output $Y$가 주어졌을때 예측 함수 $h(X)$ 를 통해 $y$ 값을 추측하는 것이다.
@@ -82,7 +81,7 @@ $\epsilon$ : random error
 
 이 둘의 관계를 그림으로보면, 아래와 같다.
 
-<img src="/assets/img/post1/post1-04.png" alt="Figure 4" width="500"/>
+<img src="/assets/img/Deep-Learning/post2/04.png" alt="Figure 4" width="500"/>
 <div class="image-caption">Figure 4: Population and Sample relationship</div>
 
 <br>
@@ -149,7 +148,7 @@ $\theta =$   $( \theta_1, \theta_2, \theta_3, ..., \theta_p)$와 같이 $\theta_
 
 아래와 같이 데이터가 주어졌을 때 3가지의 fitting을 시도해보았다고 하자,
 <br>
-<img src="/assets/img/post1/post1-05.png" alt="Figure 5" width="580"/>
+<img src="/assets/img/Deep-Learning/post2/05.png" alt="Figure 5" width="580"/>
 <div class="image-caption">Figure 5: Results of fitting linear regression, quadratic regression and polynomial of 5-th order</div>
 
 
@@ -215,13 +214,13 @@ $MSE = {1 \over N} \sum{(y- \hat{f}(x))^2}$ <br><br>
 
 <br>
 **Example)**
-<img src="/assets/img/post1/post1-06.png" alt="Figure 6" width="580"/>
+<img src="/assets/img/Deep-Learning/post2/06.png" alt="Figure 6" width="580"/>
 <div class="image-caption">Figure 6.1: Comparison of curves with different flexibility</div>
 
 왼쪽에서 검은색 선이 정답이고, 오른쪽 빨간색 선은 $MSE_{test}$ 이고 회색 선은 $MSE_{train}$을 나타낸다. Flexibility는 parameter의 개수와 같은 의미일 때 노랑색 선은 flexibility가 낮음으로 오차의 범위가 크다. 반대로 초록색 선은 flexibility가 높아서 오차의 범위는 노란색보다 작지만 trainig data에서 나온 MSE값이 test data에서 나온 값보다 현저히 작은 것을 볼 수 있다. 이것은 overfitting(과적합)이 된 모습이다. 그러면 이중에서 가장 적합하게 fitting된 모델은 파란색 선이라고 할 수 있다. 
 
 <br>
-<img src="/assets/img/post1/post1-07.png" alt="Figure 6" width="580"/>
+<img src="/assets/img/Deep-Learning/post2/07.png" alt="Figure 6" width="580"/>
 <div class="image-caption">Figure 6.2: Comparison of curves with different flexibility ( but with less noise)</div>
 
 이번에는 위에 그림을 보면, 데이터 자체가 앞전 Figure 6.1에 비해서 noise가 훨씬 적다. 검은색 truth curve를 크게 벗어나는 데이터가 없다는 뜻이다.<br>
@@ -283,7 +282,7 @@ $\lambda$ 는 hyperparameter로 모델을 최소화하거나 조율할때 쓰는
 {% include callout-bottom.html %}
 
 <br>
-<img src="/assets/img/post1/post1-08.png" alt="Figure 7" width="580"/>
+<img src="/assets/img/Deep-Learning/post2/08.png" alt="Figure 7" width="580"/>
 <div class="image-caption">Figure 7: Ridge regression; Regression depending on the variation of  lambda</div>
 위와 같이 $\lambda$의 값에 따라 regression이 바뀌는 것을 볼 수 있다.
 
