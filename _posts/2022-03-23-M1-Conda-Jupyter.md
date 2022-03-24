@@ -62,6 +62,7 @@ Terminal로 돌아와서<br>
 <br>
 <br>
 설치하고 나면 해당 <span class="highlight-red bold">Shell창을 닫고</span> 다시 새로운 Shell 창을 열어줘야한다<br>
+
 나는 자동으로 conda가 실행되는 것이 싫기 때문에 <br>
 `$ conda config --set auto_activate_base false` 도 해서 auto activate을 <span class="highlight-red bold">False</span>로 설정했다
 
