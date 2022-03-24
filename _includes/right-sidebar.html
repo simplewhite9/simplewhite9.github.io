@@ -1,0 +1,39 @@
+<!--Top Recent Blogs section-->
+<div id="right-sidebar">
+    <div id="recent-post">
+        <h3>Recent posts</h3>
+        <table>
+            <tbody>
+                {% for post in site.posts limit: 5 %}
+                <tr>
+                    <td><a href="{{post.url | prepend: site.baseurl}}"><span class="category_label">📌  {{post.categories}}</span>: {{post.title | truncate : 40}}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+<!--Keyword section-->
+{% capture tags %}
+    {% for tag in site.tags %}
+    {{ tag[1].size | plus: -10000 }}###{{ tag[0] | replace: ' ', '##' }}###{{ tag[1].size }}
+    {% endfor %}
+{% endcapture %}
+{% assign sorted_tags = tags | split: ' ' | sort %}
+
+    <div id="side-keywords">
+        <h3>Tags</h3>
+        
+        {% for sorted_tag in sorted_tags limit: 12 %}
+            {% assign items = sorted_tag | split: '###' %}
+            {% assign tag = items[1] | replace: '##', ' ' %}
+            {% assign count = items[2] | plus: 0 %}
+
+            <a class="tag-link" href="/blog/tags/{{ tag | slugify }}" rel="tag">
+                <span class="tag-highlight">{{ tag }}<span class="tag-count">({{ count }})</span></span>
+            </a> 
+        {% endfor %}
+    </div>
+
+</div>

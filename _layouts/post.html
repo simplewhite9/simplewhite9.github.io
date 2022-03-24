@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div id="main-content">
+
+    <!--Core content-->
+    <div id="core-wrapper">
+        <article id="post">
+            <header class="post-header">
+                <h3 class="post-title">
+                    <span class="post-category">{{page.categories}}</span>:
+                    <span class="post-title post-highlight">{{page.title}}</span>
+                </h3>
+                <div>
+                    <span class="post-date">{{page.date | date: "%Y-%m-%d"}}&nbsp;·</span> 
+                    {% for tag in page.tags %}
+                    <span class="post-keywords tag-highlight">
+                        {{tag}} 
+                    </span>
+                    {% endfor %}
+                
+                </div>
+            </header>
+            <div id="post-content">
+                {{ content }}
+            </div>
+        </article>
+    </div><!--#core-wrapper-->
+
+
+    <!--sub wrapper (RIGHT)-->
+    <div id="sub-wrapper">
+        {%- include right-sidebar.html -%} 
+    </div><!--#sub-wrapper-->
+</div>

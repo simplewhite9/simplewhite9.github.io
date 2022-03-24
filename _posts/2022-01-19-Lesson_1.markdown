@@ -1,0 +1,302 @@
+---
+title:  "LESSON 1"
+categories: CS224N
+tags : [Word2Vec, objective function, softmax]
+thumbnail-url: /assets/img/thumbnail/stanford-nlp-logo-160.jpg
+description: Introduction and Word Vectors (Winter 2021 강의 정리)
+
+---
+# Introduction and Word Vectors
+저번 학기에 자연어처리 수업을 들었지만 다시 한번 복습하는 겸 stanford university 강의를 들으면서 같이 정리하려고 한다.
+<a href="http://web.stanford.edu/class/cs224n/">**[Natural Language Processing with Deep Learning]**</a>
+
+<br>
+유튜브에 여러 강의가 올라와있지만 나는 **Winter 2021**를 들으려고 한다. <br>
+전공 수업을 들을때는 Winter 2019를 보고 참고 했기 때문에 이번에는 Winter 2021을 보고 정리하려고 한다. <br>
+사실 지금까지 들은 거로 이전과 다른 점은 (~~들은게 아직 별로 없지만~~) 코로나 때문인지 줌으로 교수님께서 수업을 진행하시는데... 실시간 학생들의 반응이 없어서 아쉽다는 점..? 그리고 가끔씩 렉이 걸린다는 점인 것 같다.
+
+(사용된 자료는 2021과 2022편)
+
+<br>
+
+---
+
+<div class="post-subtitle">최근 유명해진 NLP 모델: GPT-3</div>
+
+GPT-3 는 OpenAI 에서 개발한 언어 모델로, 굉장히 큰 모델을 하나 학습시켜 다양한 분야의 지식을 얻는다고 한다. 사람처럼 이해하는게 가능해 단순히 spam을 필터링 하는 게 아닌 여러가지 작업을 할 수 있는 것이다.
+
+예를 들어, 
+
+<img src="/assets/img/CS224N/Lesson1/f1.png" alt="Figure 1" width="250"/>
+<div class="image-caption">Figure 1: GPT-3 input example</div>
+
+
+ 이와 같은 글을 데이터로 입력하고 
+
+ **S: I gave John flowers**. 를 입력 한 후에 GPT-3 에게 예측해보라고 하면 데이터를 이해하고 <br>
+“**Q: Who did I give flowers to?**” 와 같이 출력을 할 수 있다고 한다
+
+또 놀라운 것은
+
+<img src="/assets/img/CS224N/Lesson1/f2.png" alt="Figure 2" width="400"/>
+<div class="image-caption">Figure 2: GPT-3 model example</div>
+
+
+사람 문장으로 되어있는 저 Query들을 SQL로 바꿀 수 있다고 한다. 
+
+<br>
+
+---
+
+<div class="post-subtitle">Representing the meaning of a word</div>
+
+어떤 단어의 의미란,
+
+<img src="/assets/img/CS224N/Lesson1/f3.png" alt="Figure 3" width="300"/>
+<div class="image-caption">Figure 3: Meaning of a word</div>
+
+
+
+위와 같이 **denotational semantics (표시적 의미론)** 즉 사전적인 의미보다는 관련적인 의미를 갖는 것 또는 아이디어와 연관 지을 수 있다. 예시로 “tree”라는 단어는 우리가 흔히 사용하는 이모티콘들을 가지고 의미를 유추할 수 있다. 
+
+보통 단어의 의미를 유추하기 위해서는 WordNet을 활용한다
+**WordNet**: 유의어 sets와 hypernyms ( “is a” relationship)을 가지고 있는 사전
+
+<br>
+
+<img src="/assets/img/CS224N/Lesson1/f4.png" alt="Figure 4" width="500"/>
+<div class="image-caption">Figure 4: Examples of the usage of WordNet with “good” and “panda”</div>
+
+
+
+예를 들어, Wordnet을 가지고 “good”와 “panda”를 찾아봤을때, 
+“good”의 synonym으로는 goodness, beneficial, honorable 등이 쭉 나오고,
+“panda”의 hypernyms를 봤을때는 “carnivore”, “mammal”  등으로 나온다
+
+<br>
+**`WordNet`**의 문제점:
+
+1. 단어의 naunce가 반영되지 않았다 ( 예를 들면, “proficient”가 “good”의 synonym으로 나왔지만 사실상 의미가 살짝 다르다)
+2. 시간이 지나면서 단어의 새로운 뜻 또는 새로운 신조어를 반영되지 않는다 (not up to date)
+3. 계속해서 유지하고 관리하는데 사람의 노동이 필요로하고, 그 사람의 주관이 개입된다 
+4. 단어 간의 유의성 측정 정확도가 떨어진다
+
+
+<br>
+
+---
+
+<div class="post-subtitle background-yellow">One-hot vectors</div>
+
+NLP에서 단어는 discrete symbol이다.
+
+예를 들면, hotel, conference, motel 은 장소를 나타내는 단어 ( a **localist** representation)이다
+
+그리고 이런 단어들을 벡터로 나타내게 되면
+
+{% include callout-head.html %}📌 {% include callout-body.html %}
+<span class="bold background-yellow">One-hot vector representation</span><br>
+<br>
+motel = [ 0 0 0 0 0 0 0 0 0 0 <span class="bold">1</span> 0 0 0 ] <br>
+hotel =  [ 0 0 0 0 <span class="bold">1</span> 0 0 0 0 0 0 0 0 0 ]<br>
+<br>
+* 해당 단어를 나타내는 자리만 1 나머지는 0 (<span class="highlight-red bold">sparse vector</span>) <br>
+* 벡터의 dimension은 vocabulary에 있는 단어의 개수 (여기서는 14) <br>
+
+{% include callout-bottom.html %}
+
+**문제점:** 단어 유사성을 나타내는 방법은 없다 
+
+예를 들면, 사용자가 “Seattle motel”을 검색했을 때 “hotel”도 나오면 좋겠지만, motel 과 hotel은 서로 수학적으로는 **orthogonal** 하기 때문에 유사성이 없어 검색 결과에 나오지 않는다. 
+
+그래서 이에 대해 **해결책**으로 이제는 유사성도 반영되도록 벡터 안에 표현을 하고자 한다 
+
+
+<br>
+
+---
+
+<div class="post-subtitle background-yellow">
+Distributional Semantics
+</div>
+
+단어의 뜻을 주위에 나타내는 단어들의 빈도수로 측정한다.
+
+막 그대로 그 단어가 쓰이는 문맥을 중요시하는 것이다. 그래서 문맥을 활용해서 해당 단어가 어떤 특정 문맥 속에 쓰이는지 안쓰이는지를 파악할 수 있는 것이다. 
+
+예를 들면,
+
+<img src="/assets/img/CS224N/Lesson1/f5.png" alt="Figure 5" width="600"/>
+<div class="image-caption">Figure 5: Example of distributional semantic with word “banking”</div>
+
+
+“banking”이라는 단어를 두고 본다면, 이 단어가 쓰인 text 전체 중 특정 회색부분인 **`fixed-window size`**안에서 쓰인 문맥 단어들을 보는 것이다. 여기서는 fixed-window size가 5임으로 해당 단어를 기준으로 좌우 5개의 단어들은  “banking”의 의미를 나타내고 있다고 할 수 있다. 
+
+---
+<div class="post-subtitle background-yellow">
+Word Vectors
+</div>
+
+단어별로 <span class="highlight-red bold">dense vector</span>로 만들어서, 비슷한 문맥에서 나오는 단어들은 서로 비슷한 벡터들이 나오게 만드는 것이다.  word vector를 다른말로는 **(word) embeddings**, **(neural) word representations**라고 부르기도 한다. 
+
+<img src="/assets/img/CS224N/Lesson1/f6.png" alt="Figure 6" width="500"/>
+<div class="image-caption">Figure 6: Word vectors of “banking” and “monetary”</div>
+
+
+Figure 6과 같이 “banking”과 “monetary”를 이와 같이 나타낼 수 있고, 서로 다른 단어의 **유사성을 측정하는 방법으로는 벡터 dot(scalar) product**을 통해 계산할 수 있다. 
+
+<img src="/assets/img/CS224N/Lesson1/f7.png" alt="Figure 7" width="500"/>
+<div class="image-caption">Figure 7: Word embedded in higher dimensional space</div>
+
+
+
+**주의**: 10차원의 벡터를 2차원으로 투영하다 보니 정보 손실이 발생하긴 하나 시각적으로는 보기 편하다. (서로 유사한 단어들은 밀집되어 있다)
+
+---
+<div class="post-subtitle">
+Word2vec
+</div>
+
+word vectors들을 학습하기 위한 framework
+
+<br>
+기본 아이디어:
+
+1. 사이즈가 큰 corpus가 있다고 가정한다
+2. 각 단어들을 벡터로 나타낸다
+3. 텍스트에 있는 단어들의 학습을 진행을하는데 distributional semantics의 아이디어를 가져와 
+현재 위치 $t$에 대하여 center word 는 $c$ 문맥안에 있는 단어들 (outside) words 들은 $o$라고 나타낸다
+4. 벡터 $c$ 와  $o$간의 유사성을 활용하여 $c$가 주어졌을때 단어 $o$가 나올 확률$P(o\|c)$ 을 계산한다 (vice versa).
+5. 해당 확률을 최대화하는 방향으로 word vector들을 조정하면서 학습시킨다
+
+Overview
+
+<img src="/assets/img/CS224N/Lesson1/f8.png" alt="Figure 8" width="500"/>
+<div class="image-caption">Figure 8.1: Example windows and process of computing P(w_(t+j) | w_t) with center word “into”</div>
+
+<img src="/assets/img/CS224N/Lesson1/f9.png" alt="Figure 9" width="500"/>
+<div class="image-caption">Figure 8.2: Example windows and process of computing P(w_(t+j) | w_t) with center word “banking”</div>
+
+<br>
+<span class="highlight-red bold">NOTE</span>: 
+<br>사실 이와 같은 방법으로 진행했을때의 two model variants
+
+(1)CBOW(Continuous Bag of Words)인 $P(o\|c)$가 있을 수 있고,<br>
+(2)skip-gram $P(c\|o)$가 있을 수 있다
+
+말로 풀어 쓰면, 중간 단어를 기준으로 문맥 단어들을 유추하는 것과 그 반대로 문맥 단어들을 가지고 중간 단어를 유추하는 것의 차이다.
+
+CS224n에서는 **skip-gram**으로 진행한다.
+
+<br>
+
+Word2Vec의 **`objective function`**을 보면 먼저
+
+{% include callout-head.html %}📌{% include callout-body.html %}
+
+ <span class="bold">
+likelihood $L(\theta)$:</span><br>
+주어진 window 안에서 center word $w_j$가 주어졌을때 문맥 (context words)단어들 $w_{t + j}$ 이 해당 문맥에 나타낼 확률
+
+{% include callout-bottom.html %}
+
+<img src="/assets/img/CS224N/Lesson1/f10.png" alt="Figure 10" width="400"/>
+
+
+{% include callout-head.html %}📌{% include callout-body.html %}
+ <span class="bold">
+Objective function $J(\theta)$: negative log likelihood</span><br>
+각 log취한 likelihood의 확률들 합의 평균값 함수<br>
+<br>
+* products보다 sum이 다루기 쉽기 때문에 log를 취한다<br>
+* negative 인 이유는 objective function을 minimize 하는 것은 결국에 - 붙였을 때 maximize 하는 것과 같다<br>
+
+{% include callout-bottom.html %}
+
+<img src="/assets/img/CS224N/Lesson1/f11.png" alt="Figure 11" width="500"/>
+
+<br>
+
+그렇다면 식은 있는데, $P( w_{t+j} \| w_t ; \theta)$를 계산하는 방법은?
+
+{% include callout-head.html %}📌 {% include callout-body.html %}
+ <span class="bold">단어별로 <span class="highlight-red">두개의 벡터</span></span>를 활용<br>
+ <br>
+(1) $v_w$: $w$ 가 center word 일때  [v 를 활용]<br>
+(2)  $u_w$ : $w$가 context (문맥) word 일때 [u 를 활용]<br>
+
+{% include callout-bottom.html %}
+
+<img src="/assets/img/CS224N/Lesson1/f12.png" alt="Figure 12" width="300"/>
+
+
+{% include callout-head.html %}➕ {% include callout-body.html %}
+
+ <span class="bold highlight-blue">$u_o^Tv_c$ </span> 는 $u^Tv = u \cdot v = \sum_{ i = 1}^{n} u_iv_i$<br>
+<br>
+즉, dot product으로 계산하며 $u$  와 $v$ 의 유사성을 계산. 다른 말로는 $o$ 와 $c$ 의 유사성 측정<br>
+( dot product 값이 크면 클수록 확률도 같이 커진다)
+
+{% include callout-bottom.html %}
+
+{% include callout-head.html %}➕{% include callout-body.html %}
+
+
+ <span class="bold highlight-blue">$\sum_{w \in V} exp(u_w^Tv_c)$ </span> 는 $P(o | c)$를 probability distribution으로 만들기 위해 normalizing 작업<br>
+<br>
+* Normalizing : 합이 1이 되도록 조정<br>
+* Exponential : 양수 값들만 나오도록 조정<br>
+
+{% include callout-bottom.html %}
+
+<span class=" bold highlight-red">NOTE</span>: $P(u_{problem} \| v_{into} ) = \ P(problem \ \| \ into; \ u_{problem}; \ v_{into}; \ \theta)$
+
+<br>
+
+이 계산방법이 바로 그 유명한 **`softmax function`이다**
+
+<img src="/assets/img/CS224N/Lesson1/f13.png" alt="Figure 13" width="300"/>
+
+<br>
+
+---
+<div class="post-subtitle">
+Optimizing value of parameters
+</div>
+
+
+계산하는 방법을 이제 알았으면 이제는 loss를 mimize하기 위해 model parameters들을 optimize해야한다.
+
+앞서 나왔던 $\theta$는 모델의 parameter 값들을 벡터로 가지고 있다.
+
+<img src="/assets/img/CS224N/Lesson1/f14.png" alt="Figure 14" width="450"/>
+<div class="image-caption">Figure 9: Vector representation of theta(left) and process of optimizing through walking down the gradient(right)</div>
+
+
+
+왼쪽과 같이 $\theta$에는 단어별로 있었던 2개의 벡터 $v$와 $u$를 가지고 있기 때문에 <br>
+단어의 개수가 V이고 한 벡터의 dimension이 $d$라고 했을때, 벡터 $\theta$의 dimension은 $2dV$와 같다.<br>
+
+optimize를 하기 위해서는 미분을 적용하여 **`gradient descent(경사하강법)`**을 사용한다.
+
+여기서부터는 수학적 계산과정을 보여주는데 조금 복잡하다..그래서 손으로 적는걸 선택했다
+<br>먼저 참고하기 좋은 내용:
+
+<img src="/assets/img/CS224N/Lesson1/f15.png" alt="Figure 15" width="500"/>
+
+
+ 이 수업에서는 center word 벡터$v_c$로 미분했을때 값만 보여준다
+
+<img src="/assets/img/CS224N/Lesson1/f16.png" alt="Figure 16" width="700"/>
+
+
+이를 통해 알아낸 것은 model train을 할때, 실제 정답에서 예측 값의 차를 감소하는 방향으로 이루어진다는 것을 알 수 있다. 
+
+끝✌🏻
+
+---
+
+**참조:**
+
+Stanford University CS224n (Winter 2021)<br>
+고려대학교 COSE461  자연어처리

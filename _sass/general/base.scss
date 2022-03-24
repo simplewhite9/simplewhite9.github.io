@@ -1,0 +1,474 @@
+/* Main body*/
+body{
+    font-family: $second-font;
+    font-style: normal;
+    letter-spacing: -0.02em;
+}
+
+@font-face {
+    font-family: 'KoPubDotumMedium';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+
+
+/* core content */
+.page-content{
+    margin-left: $sidebar-width;
+}
+
+
+#main-content{
+    display: flex;
+    min-height: $main-min-height;
+    padding-bottom: $footer-height;
+
+    #sub-wrapper{
+        width: $sub-max-width;
+        padding: 20px;
+    }
+    
+    #core-wrapper{
+        width: 100%;
+        padding: 30px 40px;
+
+        article#post, table#post-table{
+            max-width: 1000px;
+            margin:auto;
+        }
+
+    }
+}
+
+/* sidebar */
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: $sidebar-width;
+    height: 100%;
+
+    background-color: $main-color;
+    border-right: 0.7px solid rgb(228, 228, 228);
+    text-align: center;
+    z-index: 100;
+
+    /*Profile section*/
+    .profile-wrapper{
+        margin-top: 90px;
+
+        #profile{
+            width: 6rem;
+            height: 6rem;
+            margin:auto;
+            border-radius: 50%;
+            overflow: hidden;
+    
+            background-color: rgb(71, 71, 71);
+            border: 0.1rem solid rgb(253, 241, 194);
+
+            img{
+                transform: scale(1.3);
+            }
+        }
+    
+        .main-title {
+            padding-top: 0.5rem;
+            font-family: $main-font;
+    
+            a{ 
+                font-size: 1.4rem;
+                color: black;
+            }
+    
+            a:hover{
+                text-decoration: none;
+                color: gray;
+            }
+        }
+    }
+
+    
+    /*Menu section*/
+    #menu{
+        margin: 2.8rem 2.7rem;
+        font-size: 0.9rem;
+
+        a{
+            color: black;
+        }
+
+        a:hover{
+            text-decoration: none;
+        }
+
+        table, table th, table td, table tr{
+            border:none;
+            background-color: $main-color;
+        }
+
+        table th, table td{
+            padding:0.1rem 0.1rem;
+        }
+
+        table td:hover{
+            background-color: $highlight-hover;
+            color: black;
+
+            border-radius: 7%;
+            border-left: 2px solid gray;
+        }
+
+        td.menu-space:hover{
+            background-color: $main-color;
+            border: none;
+        }
+
+        td#menu-blog{
+            a{
+                color: #43978F;
+                font-weight: 700;
+            }
+        }
+
+        td#menu-blog:hover{
+            background-color: rgba(67, 151, 143, 0.14);
+            cursor: pointer;
+
+            a{
+                cursor: pointer; 
+            }
+        }
+
+        th.menu-social:hover{
+            background-color: rgba(67, 151, 143, 0.14);
+            border-left: 2px solid gray;
+        }
+
+    }
+
+    /*CHECK OUT*/
+    #check-text{
+        color: $highlight-color;
+        font-size: 1.0rem;
+    }
+
+    /*Bottom section of sidebar*/
+    #end-section{
+        position:fixed;
+        bottom: 0;
+        left: 0;
+    
+        width: $sidebar-width;
+        margin: auto;
+        margin-bottom: 0.5rem;
+    
+        text-align: center;
+    
+        #slogan{
+            font-size: 0.8rem;
+            color: $lightgray;
+        }
+    }
+
+}
+
+/* right side panel*/
+#right-sidebar{
+    position: fixed;
+    margin-right: 20px;
+
+
+    font-size: 0.76rem;
+    
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    margin-top: 10px;
+
+    a, td, th, tr, table{
+        color: gray;
+    }
+
+    a{
+        display: grid;
+    }
+
+    td, th, tr, table{
+        border: none;
+        background-color: white;
+    }
+
+    table{
+        border-left: 0.6px solid rgb(240, 240, 240);
+    }
+
+    td{
+        padding-left: 0.5rem;
+    }
+
+    a:hover{
+        color:black;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .category_label{
+        color: rgb(86, 86, 95);
+        font-weight: 600;
+    }
+
+    #side-keywords{
+        margin-top: 30px;
+
+        .tag-link{
+            display: inline-block;
+            margin-bottom: 10px;
+            .tag-count{
+                color: rgb(95, 95, 95);
+                margin-left: 0.2rem;
+                
+            }
+        }
+
+        .tag-highlight{
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.2rem;
+        
+            background-color: $lightblue;
+            color: $darkblue-font;
+        }
+    }
+
+
+}
+
+/** Top Nav Wrapper **/
+#topnav-wrapper{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: $navbar-height;
+
+    //initially do not display
+    display: none;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+
+    background-color: white;
+
+    border-bottom: 1px solid rgb(226, 226, 226);
+
+    a{
+        color: #43978F;
+        font-weight: 600;
+    }
+}
+
+
+
+
+/** SVG */
+#svg-insta{
+    margin-top:3px;
+    margin-left:-4px;
+}
+
+#svg-git{
+    margin-left:4px;
+    margin-top: 3px;
+}
+
+.svg-emoji{
+    width: 45px;
+    height: auto;
+    margin-bottom:-12px;
+}
+
+
+/*Footer*/
+footer.site-footer{
+    padding: 10px 0;
+
+    .footer-col{
+        font-size: 0.8rem;
+        margin-bottom: 0.7rem;
+    }
+
+    #copyright{
+            font-size: 1.3rem;
+        }
+
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+
+
+.word-highlight{
+    border: 1px solid rgb(214, 214, 214);
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.2rem;
+}
+
+.tag-highlight{
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+
+    background-color: $lightblue;
+    color: $darkblue-font;
+}
+
+
+
+
+
+
+/*Markdown decoration*/
+.underline{
+    text-decoration: underline;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// .highlight-red{ color: rgb(250, 112, 0);}
+.highlight-red{ color: #35817a; font-weight: 800;}
+.highlight-blue{ color: rgb(27, 27, 158); }
+.highlight-gray{color: $darkgray;}
+
+
+.background-yellow{ 
+    background-color: $post-highlight; 
+    padding: 3px;
+    border: 0.5px solid $post-highlight-border;
+    border-radius: 5px;
+
+    color: $post-text;
+}
+
+
+
+
+//Adapt to screen
+
+@media all and (max-width: 1440px){
+
+    #main-content{
+        #sub-wrapper{
+            width: $sub-max-width-small;
+        }
+    }
+
+    
+}
+
+@media all and (max-width: 1400px){
+    #main-content{
+        #sub-wrapper{
+            display: none;
+        }
+    }
+
+
+    /* core content */
+    .page-content{
+        margin-left: $sidebar-width-small;
+    }
+
+    #sidebar{
+        width: $sidebar-width-small;
+
+        #menu{
+            margin: 2.5rem 2.4rem;
+        }
+    }
+
+
+}
+
+@media all and (max-width: 950px){
+
+    #main-content{
+        #core-wrapper{
+            padding: 10px 30px;
+        }
+    }
+
+    /* core content */
+    .page-content{
+        padding-top: $navbar-height + 10px;
+        margin-left: 0;
+    }
+
+    #sidebar{
+        display: none;
+    }
+
+    #topnav-wrapper{
+        display: block;
+    }
+
+
+    footer.site-footer{
+        .footer-col{
+            font-size: 0.6rem;
+        }
+
+        #copyright{
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media all and (max-width: 950px){
+    #main-content{
+        #core-wrapper{
+            padding: 10px 10px;
+            font-size: small;
+
+
+            article#post{
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+
+    }
+}
+
+@media all and (max-width: 425px){
+    #main-content{
+        #core-wrapper{
+            font-size: smaller;
+
+            article#post{
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+        }
+    }
+
+    #topnav-wrapper{
+        a{
+            font-size: 0.9rem;
+        }
+    }
+
+
+}

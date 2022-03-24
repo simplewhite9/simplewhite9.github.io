@@ -24,20 +24,75 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
+slogan: ERROR! My brain is loading...
+profile-link : /assets/img/profile_image.jpeg
 
 domain: simplewhite9.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://simplewhite9.github.io # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  simplewhite9
+github_url: https://github.com/simplewhite9
 
 # Build settings
 theme: null
 plugins:
   - jekyll-feed
+  - jekyll-archives
+markdown: kramdown
 
+kramdown:
+   math_engine: mathjax
+   
 include: [_pages, _layouts]
 
+
+#Layouts
+defaults:
+  -
+    scope:
+      type: posts
+      path: _posts
+    values:
+      is_post: true
+      layout: post
+      permalink: /blog/:categories/:title/
+  -
+    scope:
+      type: pages
+      path: _pages
+    values:
+      is_post: false
+      layout: page
+
+
+#Pagination
+# paginate : 10
+
+#sass
+sass:
+  sass_dir: _sass
+  # style: :compressed
+
+#JekyII compress
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /blog/tags/:name/
+    category: /blog/categories/:name/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
