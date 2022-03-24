@@ -4,7 +4,7 @@ date:   2022-01-05 00:12:24 +0900
 categories: [Deep Learning]
 tags : [Supervised Learning, Overfitting, Underfitting, MSE, Regularization]
 thumbnail-url: /assets/img/thumbnail/Deep-Learning-logo.png
-description: 
+description: 딥러닝을 이해하기 위한 머신러닝의 기초 정리
 
 ---
 
@@ -41,7 +41,7 @@ $x = (x_1, ...., x_n)$도  <span class="bold highlight-red">column</span> vector
 <div class="image-caption">Figure 2: Supervised regression example</div>
 
 
-각 홍보 매체 TV, Radio, Newspaper에 대한 홍보비용 값이 주어졌을때 각 두 데이터를 가지고 추 세선을 그어서 예측하는데 활용하는 것이다.
+각 홍보 매체 TV, Radio, Newspaper에 대한 홍보비용 값이 주어졌을때 각 두 데이터를 가지고 추세선을 그어서 예측하는데 활용하는 것이다.
 
 Supervised learning의 process를 한눈에 보면,
 

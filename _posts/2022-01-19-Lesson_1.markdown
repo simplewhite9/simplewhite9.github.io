@@ -3,7 +3,7 @@ title:  "LESSON 1"
 categories: CS224N
 tags : [Word2Vec, objective function, softmax]
 thumbnail-url: /assets/img/thumbnail/stanford-nlp-logo-160.jpg
-description: Introduction and Word Vectors
+description: Introduction and Word Vectors (Winter 2021 강의 정리)
 
 ---
 # Introduction and Word Vectors
@@ -15,7 +15,7 @@ description: Introduction and Word Vectors
 전공 수업을 들을때는 Winter 2019를 보고 참고 했기 때문에 이번에는 Winter 2021을 보고 정리하려고 한다. <br>
 사실 지금까지 들은 거로 이전과 다른 점은 (~~들은게 아직 별로 없지만~~) 코로나 때문인지 줌으로 교수님께서 수업을 진행하시는데... 실시간 학생들의 반응이 없어서 아쉽다는 점..? 그리고 가끔씩 렉이 걸린다는 점인 것 같다.
 
-(사용된 자료는 2022편)
+(사용된 자료는 2021과 2022편)
 
 <br>
 
@@ -177,12 +177,11 @@ Overview
 <img src="/assets/img/CS224N/Lesson1/f9.png" alt="Figure 9" width="500"/>
 <div class="image-caption">Figure 8.2: Example windows and process of computing P(w_(t+j) | w_t) with center word “banking”</div>
 
+<br>
+<span class="highlight-red bold">NOTE</span>: 
+<br>사실 이와 같은 방법으로 진행했을때의 two model variants
 
-
-<span class="highlight-red bold">NOTE</span>: 사실 이와 같은 방법으로 진행했을때의 two model variants
-
-(1)CBOW(Continuous Bag of Words)인 $P(o\|c)$가 있을 수 있고,
-
+(1)CBOW(Continuous Bag of Words)인 $P(o\|c)$가 있을 수 있고,<br>
 (2)skip-gram $P(c\|o)$가 있을 수 있다
 
 말로 풀어 쓰면, 중간 단어를 기준으로 문맥 단어들을 유추하는 것과 그 반대로 문맥 단어들을 가지고 중간 단어를 유추하는 것의 차이다.
