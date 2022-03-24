@@ -4,7 +4,7 @@
 /* Post list */
 table#post-table{
     border: none;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: $second-font;
 
 
     td, tr{
@@ -26,8 +26,8 @@ table#post-table{
 
             .thumbnail{
                 background-color: white;
-                width: 6rem;
-                height: 6rem;
+                width: 5.0rem;
+                height: 5.0rem;
                 margin:auto;
             }
         }
@@ -37,7 +37,7 @@ table#post-table{
             padding: 8px 15px;
 
             .post-category, .post-title{
-                font-size: 1.45rem;
+                font-size: 1.20rem;
             }
 
             .post-title{
@@ -57,6 +57,10 @@ table#post-table{
 
             .post-description{
                 color: rgb(99, 99, 99);
+            }
+
+            .post-date, .post-keywords, .post-description{
+                font-size: 0.8rem;
             }
 
             a{

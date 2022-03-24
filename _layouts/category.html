@@ -6,21 +6,19 @@ layout: default
 
     <!--Core content-->
     <div id="core-wrapper">
+        
         <table id="post-table">
+            <thead >
+                <tr>
+                    <th style="background: none; border: none;">{{page.title}}</th>
+                </tr>
+            </thead>
             {% for post in site.posts %}
             
             {% if post.categories contains page.title %}
                 <tr>
                     <td>
                         <div class="post-list">
-
-                            <!--post image-->
-                            <div class="post-thumbnail">
-                                <div class="thumbnail">
-                                    <img src={{post.thumbnail-url}} onerror="this.style.display='none'"/>
-                                </div>
-                            </div>
-
                             <!--post basic info-->
                             <div class="post-info">
                                     <a class="post-maininfo" href="{{post.url | prepend: site.baseurl}}">

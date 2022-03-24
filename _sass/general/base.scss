@@ -4,6 +4,13 @@ body{
     font-style: normal;
     letter-spacing: -0.02em;
 }
+
+@font-face {
+    font-family: 'KoPubDotumMedium';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
   
 
 
@@ -214,7 +221,7 @@ body{
     }
 
     #side-keywords{
-        margin-top: 70px;
+        margin-top: 30px;
 
         .tag-link{
             display: inline-block;
@@ -347,15 +354,12 @@ footer.site-footer{
 
 .background-yellow{ 
     background-color: $post-highlight; 
-    padding: 1px 5px;
+    padding: 3px;
     border: 0.5px solid $post-highlight-border;
-    border-radius: 3px;
+    border-radius: 5px;
+
+    color: $post-text;
 }
-
-
-
-
-
 
 
 
