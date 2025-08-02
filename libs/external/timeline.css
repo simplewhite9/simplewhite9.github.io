@@ -231,7 +231,7 @@
   }
 
   .flag {
-    background: rgb(255,255,255);
+    background: #fbe7db;
     z-index: 15;
   }
 
@@ -247,7 +247,8 @@
     margin-left: -9px;
     background: #fff;
     border-radius: 10px;
-    border: 4px solid rgb(51, 0, 111);
+    /* border: 4px solid rgb(51, 0, 111); */
+    border: 4px solid #FF8C42;
     z-index: 10;
   }
 
