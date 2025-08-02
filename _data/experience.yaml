@@ -12,14 +12,14 @@ experiences:
   subtitle: "Video Understanding with Foundation Models"
   category: "school"
 
-- place: "Travel award"
-  time: "2023 Aug"
-  title: "ICCV Travel Award"
-  category: "work"
-
 - place: "Scholarship"
   time: "2023 Sept"
   title: "Academic Excellence Freshman Scholarship"
+  category: "work"
+
+- place: "Travel award"
+  time: "2023 Aug"
+  title: "ICCV Travel Award"
   category: "work"
 
 - place: "Korea University"
