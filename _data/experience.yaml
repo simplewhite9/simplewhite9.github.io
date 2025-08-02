@@ -1,0 +1,28 @@
+experiences:
+
+- place: "MLV Lab"
+  time: "2025 ~"
+  title: "Ph.D. Student (Advisor: Hyunwoo J. Kim)"
+  subtitle: "Video Understanding with Foundation Models"
+  category: "school"
+
+- place: "MLV Lab"
+  time: "2023 Sept - 2025 Sept"
+  title: "M.S. Student (Advisor: Hyunwoo J. Kim)"
+  subtitle: "Video Understanding with Foundation Models"
+  category: "school"
+
+- place: "Travel award"
+  time: "2023 Aug"
+  title: "ICCV Travel Award"
+  category: "work"
+
+- place: "Scholarship"
+  time: "2023 Sept"
+  title: "Academic Excellence Freshman Scholarship"
+  category: "work"
+
+- place: "Korea University"
+  time: "2019 March - 2023 Aug"
+  title: "B.S. Student in Computer Science"
+  category: "school"

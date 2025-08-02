@@ -1,0 +1,36 @@
+papers:
+
+  - title: "Bidirectional Likelihood Estimation with Multi-Modal Large Language Models for Text-Video Retrieval"
+    authors: "Dohwan Ko*, <b>Ji Soo Lee*</b>, Minhyuk Choi, Zihang Meng, Hyunwoo J. Kim"
+    venue: "ICCV 2025 Highlight"
+    thumbnail: "/assets/publications/2025_blim/thumbnail.png"
+    paper_pdf: "https://arxiv.org/abs/2507.23284"
+    code: "https://github.com/mlvlab/BLiM"
+    selected: y
+
+  - title: "VidChain: Chain-of-Tasks with Metric-based Direct Preference Optimization for Dense Video Captioning"
+    authors: "<b>Ji Soo Lee*</b>, Jongha Kim*, Jeehye Na, Jinyoung Park, Hyunwoo J. Kim"
+    venue: "AAAI 2025"
+    thumbnail: "/assets/publications/2025_vidchain/thumbnail.png"
+    paper_pdf: "https://arxiv.org/abs/2501.06761"
+    code: "https://github.com/mlvlab/VidChain"
+    selected: y
+
+  - title: "Large Language Models are Temporal and Causal Reasoners for Video Question Answering"
+    authors: "Dohwan Ko*, <b>Ji Soo Lee*</b>, Wooyoung Kang, Byungseok Roh, Hyunwoo J. Kim"
+    venue: "EMNLP 2023"
+    thumbnail: "/assets/publications/2023_flipped_vqa/thumbnail.png"
+    paper_pdf: "https://arxiv.org/abs/2310.15747"
+    code: "https://github.com/mlvlab/Flipped-VQA"
+    selected: y
+
+
+  - title: "Open-vocabulary Video Question Answering: A New Benchmark for Evaluating the Generalizability of Video Question Answering Models"
+    authors: "Dohwan Ko, <b>Ji Soo Lee</b>, Miso Choi, Jaewon Chu, Jihwan Park, Hyunwoo J. Kim"
+    venue: "ICCV 2023"
+    thumbnail: "/assets/publications/2023_ovqa/thumbnail.png"
+    paper_pdf: "https://arxiv.org/abs/2308.09363"
+    code: "https://github.com/mlvlab/OVQA"
+    selected: y
+
+
