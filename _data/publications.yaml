@@ -1,4 +1,9 @@
 papers:
+  - title: "Captioning for Text-Video Retrieval via DualGroup-Direct Preference Optimization"
+    authors: "<b>Ji Soo Lee</b>, Byungoh Ko, Jaewon Cho, Howoong Lee, Jaewoon Byun, Hyunwoo J. Kim"
+    venue: "EMNLP Findings 2025"
+    thumbnail: "/assets/publications/2025_caredpo/thumbnail.jpg"
+    selected: y
 
   - title: "Bidirectional Likelihood Estimation with Multi-Modal Large Language Models for Text-Video Retrieval"
     authors: "Dohwan Ko*, <b>Ji Soo Lee*</b>, Minhyuk Choi, Zihang Meng, Hyunwoo J. Kim"
