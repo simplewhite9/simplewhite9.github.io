@@ -16,6 +16,27 @@ a{
   font-weight: 500;
 }
 
+.collab-icon{
+  font-size: 0.95em;
+  margin-right: 3px;
+}
+
+.collab-icon.trail{
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.collab-meta{
+  color: #0081FB;
+}
+
+.collab-logo{
+  height: 0.95em;
+  width: auto;
+  margin-right: 4px;
+  vertical-align: -0.12em;
+}
+
 @media (max-width: 550px) {
   .paper .one-third.column, .paper .two-thirds.column {
     width: 100% !important;

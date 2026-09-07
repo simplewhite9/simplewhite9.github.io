@@ -1,4 +1,24 @@
 papers:
+  - title: "WearableQA: A Benchmark for Health Reasoning over Real-World Wearable Data"
+    authors: "<b>Ji Soo Lee*</b>, Xilun Chen*, Pierce Chuang, Ashish Shenoy, Jason Wei, Dohwan Ko, Hyunwoo J. Kim, Benoit Corda"
+    venue: "Preprint"
+    thumbnail: "/assets/publications/2026_wearableqa/thumbnail.png"
+    paper_pdf: "https://arxiv.org/abs/2609.05405"
+    selected: y
+
+  - title: "Reason in the Words You Speak: Idiolectal Paraphrasing Off-Policy Traces for Reasoning Distillation in VideoLLMs"
+    authors: "<b>Ji Soo Lee</b>, Jinyoung Park, Seohyun Lee, Jongha Kim, Joonmyung Choi, Jinsung Yoon, Hyunwoo J. Kim"
+    venue: "Preprint"
+    thumbnail: "/assets/publications/2026_idiolectal/thumbnail.png"
+    paper_pdf: "https://arxiv.org/abs/2608.26684"
+    selected: y
+
+  - title: "SVMemAgent: A Streaming Video Memory Agent for Query-Agnostic Online Frame Selection"
+    authors: "Dohwan Ko, <b>Ji Soo Lee</b>, Pierce Chuang, Debojeet Chatterjee, Ashish Shenoy, Yichao Lu, Seungwhan Moon, Xin Luna Dong, Vikas Bhardwaj, Hyunwoo J. Kim"
+    venue: "Wearable AI Workshop, ECCV 2026"
+    thumbnail: "/assets/publications/2026_svmemagent/thumbnail.png"
+    selected: y
+
   - title: "Captioning for Text-Video Retrieval via DualGroup-Direct Preference Optimization"
     authors: "<b>Ji Soo Lee</b>, Byungoh Ko, Jaewon Cho, Howoong Lee, Jaewoon Byun, Hyunwoo J. Kim"
     venue: "EMNLP 2025 findings"

@@ -1,13 +1,19 @@
 experiences:
 
+- place: '<i class="fa-brands fa-meta collab-icon collab-meta" aria-hidden="true"></i>Meta'
+  time: "Menlo Park, CA · 2026 April - 2026 July"
+  title: "Research Intern, Reality Labs"
+  subtitle: "Health Reasoning over Real-World Wearable Data <br/> Manager: Pierce Chuang <br/> Team: Xilun Chen, Benoit Corda, Ashish Shenoy, Jason Wei"
+  category: "work"
+
 - place: "MLV Lab"
-  time: "2025 ~"
+  time: "2026 March ~"
   title: "Ph.D. Student (Advisor: Hyunwoo J. Kim)"
   subtitle: "Video Understanding with Foundation Models"
   category: "school"
 
 - place: "MLV Lab"
-  time: "2023 Sept - 2025 Sept"
+  time: "2023 Sept - 2026 Feb"
   title: "M.S. Student (Advisor: Hyunwoo J. Kim)"
   subtitle: "Video Understanding with Foundation Models"
   category: "school"
