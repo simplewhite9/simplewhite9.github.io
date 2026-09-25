@@ -37,6 +37,11 @@ a{
   vertical-align: -0.12em;
 }
 
+.collab-logo.trail{
+  margin-right: 0;
+  margin-left: 5px;
+}
+
 @media (max-width: 550px) {
   .paper .one-third.column, .paper .two-thirds.column {
     width: 100% !important;
