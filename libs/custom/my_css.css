@@ -42,6 +42,27 @@ a{
   margin-left: 5px;
 }
 
+/* "Collaboration w/ X" line under a paper's venue */
+.collab-note{
+  margin-bottom: 0.6rem;
+  color: #595959;
+}
+
+.collab-note .collab-meta{
+  font-weight: 600;
+}
+
+.brand-google{
+  font-weight: 600;
+}
+
+.brand-google span:nth-child(1){ color: #4285F4; }
+.brand-google span:nth-child(2){ color: #EA4335; }
+.brand-google span:nth-child(3){ color: #FBBC05; }
+.brand-google span:nth-child(4){ color: #4285F4; }
+.brand-google span:nth-child(5){ color: #34A853; }
+.brand-google span:nth-child(6){ color: #EA4335; }
+
 @media (max-width: 550px) {
   .paper .one-third.column, .paper .two-thirds.column {
     width: 100% !important;

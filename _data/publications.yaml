@@ -1,23 +1,34 @@
 papers:
+  - title: "Reason in the Words You Speak: Idiolectal Paraphrasing Off-Policy Traces for Reasoning Distillation in VideoLLMs"
+    authors: "<b>Ji Soo Lee</b>, Jinyoung Park, Seohyun Lee, Jongha Kim, Joonmyung Choi, Jinsung Yoon, Hyunwoo J. Kim"
+    venue: "NeurIPS 2026"
+    collab: "google"
+    thumbnail: "/assets/publications/2026_idiolectal/thumbnail.png"
+    paper_pdf: "https://arxiv.org/abs/2608.26684"
+    selected: y
+
   - title: "WearableQA: A Benchmark for Health Reasoning over Real-World Wearable Data"
     authors: "<b>Ji Soo Lee*</b>, Xilun Chen*, Pierce Chuang, Ashish Shenoy, Jason Wei, Dohwan Ko, Hyunwoo J. Kim, Benoit Corda"
     venue: "Preprint"
+    collab: "meta"
     thumbnail: "/assets/publications/2026_wearableqa/thumbnail.png"
     paper_pdf: "https://arxiv.org/abs/2609.05405"
     code: "https://github.com/facebookresearch/WearableQA"
     data: "https://huggingface.co/datasets/facebook/WearableQA"
     selected: y
 
-  - title: "Reason in the Words You Speak: Idiolectal Paraphrasing Off-Policy Traces for Reasoning Distillation in VideoLLMs"
-    authors: "<b>Ji Soo Lee</b>, Jinyoung Park, Seohyun Lee, Jongha Kim, Joonmyung Choi, Jinsung Yoon, Hyunwoo J. Kim"
-    venue: "NeurIPS 2026"
-    thumbnail: "/assets/publications/2026_idiolectal/thumbnail.png"
-    paper_pdf: "https://arxiv.org/abs/2608.26684"
+  - title: "Retrieval-Augmented Skill Optimization via Cross-Harness Adaptation"
+    authors: "Jaewon Chu, <b>Ji Soo Lee</b>, Jihwan Park, Dohwan Ko, Jeehye Na, Seunghun Lee, Taehoon Lee, Minseo Yoon, Minseok Joo, Yunyang Xiong, Hyunwoo J. Kim"
+    venue: "Preprint"
+    collab: "meta"
+    thumbnail: "/assets/publications/2026_raso/thumbnail.png"
+    paper_pdf: "https://arxiv.org/abs/2609.38024"
     selected: y
 
   - title: "SVMemAgent: A Streaming Video Memory Agent for Query-Agnostic Online Frame Selection"
     authors: "Dohwan Ko, <b>Ji Soo Lee</b>, Pierce Chuang, Debojeet Chatterjee, Ashish Shenoy, Yichao Lu, Seungwhan Moon, Xin Luna Dong, Vikas Bhardwaj, Hyunwoo J. Kim"
     venue: "Wearable AI Workshop, ECCV 2026"
+    collab: "meta"
     thumbnail: "/assets/publications/2026_svmemagent/thumbnail.png"
     paper_pdf: "https://arxiv.org/abs/2609.18540"
     selected: y
@@ -33,6 +44,7 @@ papers:
   - title: "Bidirectional Likelihood Estimation with Multi-Modal Large Language Models for Text-Video Retrieval"
     authors: "Dohwan Ko*, <b>Ji Soo Lee*</b>, Minhyuk Choi, Zihang Meng, Hyunwoo J. Kim"
     venue: "ICCV 2025 Highlight"
+    collab: "meta"
     thumbnail: "/assets/publications/2025_blim/thumbnail.png"
     paper_pdf: "https://arxiv.org/abs/2507.23284"
     code: "https://github.com/mlvlab/BLiM"
