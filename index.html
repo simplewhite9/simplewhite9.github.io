@@ -17,18 +17,48 @@ title: Home
 <div class="docs-section" id="News">
   <h4 >News</h4>
   <p>
-    <ul>
-      <li>[2026 Sept] Our paper <a href="https://arxiv.org/abs/2609.38024" target="_blank">RASO</a>, a collaboration with <b><i class="fa-brands fa-meta collab-icon collab-meta" aria-hidden="true"></i>Meta</b>, is now available on arXiv.</li>
-      <li>[2026 Sept] Our paper <a href="https://arxiv.org/abs/2608.26684" target="_blank">VideoEcho-r1</a>, a collaboration with <b><img src="{{ '/assets/logos/google.svg' | prepend: site.baseurl }}" class="collab-logo" alt="" aria-hidden="true">Google Cloud</b>, has been accepted to <b>NeurIPS 2026</b>.</li>
-      <li>[2026 Sept] Our paper <a href="https://arxiv.org/abs/2609.05405" target="_blank">WearableQA</a>, a collaboration with <b><i class="fa-brands fa-meta collab-icon collab-meta" aria-hidden="true"></i>Meta</b>, is now available on arXiv.</li>
-      <li>[2026 July] Our paper <a href="https://arxiv.org/abs/2609.18540" target="_blank">SVMemAgent</a> has been accepted to the <b>Wearable AI Workshop @ ECCV 2026</b><i class="fa-brands fa-meta collab-icon collab-meta trail" aria-hidden="true"></i>.</li>
-      <li>[2025 Aug] Our paper <a href="https://arxiv.org/abs/2509.16560" target="_blank">CaRe-DPO</a> has been accepted to <b>EMNLP 2025</b> as findings.</li>
-      <li>[2025 Jun] Our paper <a href="https://arxiv.org/abs/2507.23284" target="_blank">BLiM</a>, a collaboration with <b><i class="fa-brands fa-meta collab-icon collab-meta" aria-hidden="true"></i>Meta</b>, has been accepted to <b>ICCV 2025</b> as <span class="highlight"><b>Highlight</b></span>.</li>
-      <li>[2025 Jan] Our paper <a href="https://arxiv.org/abs/2501.06761" target="_blank">VidChain</a> has been accepted to <b>AAAI 2025</b>.</li>
-      <li>[2023 Oct] Our paper <a href="https://arxiv.org/abs/2310.15747" target="_blank">Flipped-VQA</a> has been accepted to <b>EMNLP 2023</b>.</li>
-      <li>[2023 Jul] Our paper <a href="https://arxiv.org/abs/2308.09363" target="_blank">OVQA</a> has been accepted to <b>ICCV 2023</b>.</li>
+    <ul class="news-list" id="news-list">
+      <li>[2026 Sept] Our paper <a href="https://arxiv.org/abs/2609.38024" target="_blank">RASO</a> (w/ <b><i class="fa-brands fa-meta collab-icon collab-meta" aria-hidden="true"></i>Meta</b>) is now available on arXiv.</li>
+      <li>[2026 Sept] Our paper <a href="https://arxiv.org/abs/2608.26684" target="_blank">VideoEcho-r1</a> (w/ <b><img src="{{ '/assets/logos/google.svg' | prepend: site.baseurl }}" class="collab-logo" alt="" aria-hidden="true">Google Cloud</b>) has been accepted to <b>NeurIPS 2026</b>. 🎉</li>
+      <li>[2026 Sept] Our paper <a href="https://arxiv.org/abs/2609.05405" target="_blank">WearableQA</a> (w/ <b><i class="fa-brands fa-meta collab-icon collab-meta" aria-hidden="true"></i>Meta</b>) is now available on arXiv.</li>
+      <li>[2026 July] Our paper <a href="https://arxiv.org/abs/2609.18540" target="_blank">SVMemAgent</a> has been accepted to the <b>Wearable AI Workshop @ ECCV 2026</b><i class="fa-brands fa-meta collab-icon collab-meta trail" aria-hidden="true"></i>. 🎉</li>
+      <li>[2025 Aug] Our paper <a href="https://arxiv.org/abs/2509.16560" target="_blank">CaRe-DPO</a> has been accepted to <b>EMNLP 2025</b> as findings. 🎉</li>
+      <li>[2025 Jun] Our paper <a href="https://arxiv.org/abs/2507.23284" target="_blank">BLiM</a> (w/ <b><i class="fa-brands fa-meta collab-icon collab-meta" aria-hidden="true"></i>Meta</b>) has been accepted to <b>ICCV 2025</b> as <span class="highlight"><b>Highlight</b></span>. 🎉</li>
+      <li>[2025 Jan] Our paper <a href="https://arxiv.org/abs/2501.06761" target="_blank">VidChain</a> has been accepted to <b>AAAI 2025</b>. 🎉</li>
+      <li>[2023 Oct] Our paper <a href="https://arxiv.org/abs/2310.15747" target="_blank">Flipped-VQA</a> has been accepted to <b>EMNLP 2023</b>. 🎉</li>
+      <li>[2023 Jul] Our paper <a href="https://arxiv.org/abs/2308.09363" target="_blank">OVQA</a> has been accepted to <b>ICCV 2023</b>. 🎉</li>
     </ul>
   </p>
+
+  <script>
+    // Show the first 6 news items (plus a peek of the next); the rest scroll
+    (function () {
+      var list = document.getElementById('news-list');
+      var visible = 6, peek = 14;
+
+      function update() {
+        var atEnd = list.scrollTop + list.clientHeight >= list.scrollHeight - 2;
+        list.classList.toggle('has-more', !atEnd);
+      }
+
+      function fit() {
+        var items = list.children;
+        if (items.length <= visible) {
+          list.style.maxHeight = '';
+          list.classList.remove('has-more');
+          return;
+        }
+        var top = list.getBoundingClientRect().top - list.scrollTop;
+        list.style.maxHeight = (items[visible].getBoundingClientRect().top - top + peek) + 'px';
+        update();
+      }
+
+      list.addEventListener('scroll', update);
+      window.addEventListener('resize', fit);
+      window.addEventListener('load', fit);
+      fit();
+    })();
+  </script>
 
 </div>
 

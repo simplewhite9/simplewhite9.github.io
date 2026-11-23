@@ -69,12 +69,15 @@
 
     <section class="header">
       <div class="row">
-        <div class="three columns">
-          <a href="{{ site.baseurl }}/">
-            <img style="border-color:white; border-width: 3px; border-style: solid;" class="u-max-full-width" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}'></a>
+        <div class="four columns">
+          <a href="{{ site.baseurl }}/" class="profile-pic">
+            <img style="border-color:white; border-width: 3px; border-style: solid;" class="u-max-full-width" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}'>
+            {% if site.data.main_info.profile_pic_hover %}
+            <img style="border-color:white; border-width: 3px; border-style: solid;" class="profile-pic-hover" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic_hover }}' alt="">
+            {% endif %}</a>
             <!-- <img style="border-color:rgb(144, 177, 238); border-width: 3px; border-style: solid;" class="u-max-full-width" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}'></a> -->
         </div>
-        <div class="nine columns main-description">
+        <div class="eight columns main-description">
             <h1>{{ site.data.main_info.name }}</h1>
             <p>⚪️ {{ site.data.main_info.title }}</p>
             <p>⚪️ {{ site.data.main_info.email }}</p>
@@ -99,6 +102,9 @@
                 <i class="ai ai-google-scholar ai-lg" aria-hidden="true"></i>
               </span>
             </p>
+            {% if site.data.main_info.status %}
+            <p class="status-note"><i class="fa-solid fa-plane-departure" aria-hidden="true"></i>{{ site.data.main_info.status }}</p>
+            {% endif %}
         </div>
       </div>
     </section>

@@ -16,6 +16,10 @@ a{
   font-weight: 500;
 }
 
+.highlight-pink{
+  color: #DB2777;
+}
+
 .collab-icon{
   font-size: 0.95em;
   margin-right: 3px;
@@ -40,6 +44,54 @@ a{
 .collab-logo.trail{
   margin-right: 0;
   margin-left: 5px;
+}
+
+/* Profile photo: second photo fades in on hover */
+.profile-pic{
+  position: relative;
+  display: block;
+}
+
+.profile-pic img{
+  display: block;
+}
+
+.profile-pic-hover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-pic:hover .profile-pic-hover{
+  opacity: 1;
+}
+
+/* "Where I'll be" line under the social icons */
+.status-note{
+  margin-top: 2.6rem;
+  margin-bottom: 0;
+  color: #595959;
+}
+
+.status-note i{
+  color: #FF8C42;
+  margin-right: 6px;
+}
+
+/* News: height is set by the script in index.html; older items scroll */
+.news-list{
+  overflow-y: auto;
+}
+
+.news-list.has-more{
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 3rem), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 3rem), transparent);
 }
 
 /* "Collaboration w/ X" line under a paper's venue */
